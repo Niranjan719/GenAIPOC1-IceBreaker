@@ -10,7 +10,7 @@ def ice_break_with(name:str) -> str:
     linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_username)
     summary_template = """
         given the Linkedin information {information} about a person from, I want you to create:
-         1. Brief summary in about 100 Words.
+         1. Brief summary in about 100 Words. Make it 2 to 3 paragraphs.
          2. 5 interesting facts about them.
     """
 
@@ -27,7 +27,7 @@ def ice_break_with(name:str) -> str:
 if __name__ == "__main__":
     load_dotenv()
     print("Ice-Breaker")
-    ice_break_with(name='https://www.linkedin.com/in/niranjan-sai-koppisetti/')
+    ice_break_with(name='Krish Naik')
 
 
 
