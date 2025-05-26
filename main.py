@@ -1,18 +1,10 @@
-# This is a sample Python script.
+import pprint
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('Chariii is sorry')
-
-
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Make the GET request
+response = requests.get(
+    'https://gist.githubusercontent.com/Niranjan719/179c1bfa5f0c4801b18304b41968655f/raw/4959d54980b94a0de2562308df755ad6b16a83b8/andrewng_linkedin.json'
+)
+# Parse JSON and pretty print it
+data = response.json()
+pprint.pprint(data)
