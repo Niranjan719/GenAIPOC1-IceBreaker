@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import pprint
 import requests
 
@@ -10,4 +9,3 @@ response = requests.get(
 # Parse JSON and pretty print it
 data = response.json()
 pprint.pprint(data)
->>>>>>> 5ed7d4c6d3055d30008daf4ec40b583a7792b574

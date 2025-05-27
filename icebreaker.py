@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 import os
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
@@ -12,7 +10,7 @@ from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent
 
 
 def ice_break_with(name: str) -> Tuple[Summary, str]:
-    linkedin_username = linkedin_lookup_agent(name=name)
+    linkedin_username = linkedin_lookup_agent(name=name) # URL
     linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_username)
     summary_template = """
         given the Linkedin information {information} about a person from, I want you to create:
@@ -41,4 +39,3 @@ if __name__ == "__main__":
     load_dotenv()
     print("Ice-Breaker")
     ice_break_with(name='https://www.linkedin.com/in/bastyajayshenoy/')
->>>>>>> 5ed7d4c6d3055d30008daf4ec40b583a7792b574
